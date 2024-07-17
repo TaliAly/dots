@@ -2,15 +2,14 @@
   "position": "top",
   "mod": "dock",
   "layer": "top",
-  "width": 1356,
-  "height": 40,
-  "margin-top": 3,
+  "width": 1354,
+  "height": 24,
+  "margin-top": 4,
+  "reload_style_on_change": true,
 
-  "modules-left": ["custom/powermenu","hyprland/submap","image"],
-  "modules-center": ["hyprland/workspaces",],
-  "modules-right": ["network", "bluetooth","pulseaudio","custom/mic","battery", "clock", "tray"],
-
-
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["hyprland/submap",],
+  "modules-right": ["network", "bluetooth","pulseaudio", "custom/wlsunset","custom/mic","battery", "clock", "tray"],
 
 
   // Modules configuration
@@ -20,6 +19,7 @@
       "max-length": 30,
       "tooltip": false
   },
+
   "hyprland/mode": {
       "format": " {}",
       "max-length": 50,
@@ -33,7 +33,7 @@
       "all-outputs": true,
       "format": "{icon}",
       "format-icons": {
-          "1": "ナ",
+          "1": "ー",
           "2": "ニ",
           "3": "ヌ",
           "4": "ネ",
@@ -45,7 +45,7 @@
   },
 
   "clock": {
-      "format": "{:   %I:%M %p }",
+      "format": "{:   %I:%M }",
       "timezone": "America/Bogota",
       "on-click": "kitty -e tuime",
   },
@@ -104,7 +104,10 @@
       "on-click-right": "blueman-manager",
   },
 
-    // CUSTOM MODULES
+  // ╔═╗┬ ┬┌─┐┌┬┐┌─┐┌┬┐  ┌┬┐┌─┐┌┬┐┬ ┬┬  ┌─┐┌─┐
+  // ║  │ │└─┐ │ │ ││││  ││││ │ │││ ││  ├┤ └─┐
+  // ╚═╝└─┘└─┘ ┴ └─┘┴ ┴  ┴ ┴└─┘─┴┘└─┘┴─┘└─┘└─┘
+
   "custom/mic": {
       "format": "{}",
       "exec": "~/.config/waybar/scripts/mic.sh",
@@ -112,32 +115,12 @@
       "tooltip-format": "{}",
       "on-click": "amixer set Capture toggle"
   },
-  "custom/wallpaper": {
-      "interval": 36000,
-      "format": " ",
-      "on-click": "~/.config/hypr/scripts/swwwallselect.sh",
-  },
-  "custom/powermenu": {
-      "interval": 360000,
-      "format": "",
-      "on-click": "sh -c '(~/.config/rofi/scripts/power-menu.sh)' & disown",
-      "tooltip": false 
-  },
   "custom/wlsunset": {
       "format": " ",
       "tooltip": false,
       "on-click": "[[ ! pgrep wlsunset ]] && wlsunset || killall wlsunset"
   },
 
-  "image": {
-        "exec": "/home/takis/.config/waybar/scripts/img.sh",
-        "size": 28,
-        "interval": 360000,
-        "format": "{}",
-        "on-click": "nautilus",
-  },
-
-  // END OF CUSTOM
   "tray": {
       "icon-size": 18,
       "spacing": 5

@@ -1,0 +1,51 @@
+shell = "bash -c '{}'"
+
+[[items]]
+file = "~/.config/waybar/colors.css"
+template = "waybar"
+rewrite = true
+hook = "killall waybar; waybar &"
+
+[[items]]
+file = "~/.config/kitty/colors.conf"
+template = "kitty"
+subtemplate = "default"
+rewrite = true
+hook = "kill -SIGUSR1 $(pidof kitty)"
+
+[[item]]
+file= "~/.config/mako/config"
+template = "mako"
+rewrite = false
+start = "#flavour"
+end = "#end"
+hook = "killall mako; mako &"
+
+
+[[item]]
+file= "~/.config/nvim/lua/plugins/colors.lua"
+template="nvim"
+rewrite = false
+start="--# Start flavours"
+end="--# End flavours"
+hook=""
+
+
+[[item]]
+file= "~/.config/rofi/config.rasi"
+template = "rofi"
+rewrite = false
+start= "/* flavours */"
+end = "/* end flavours */"
+
+[[item]]
+file = "~/.config/gtk-2.0/gtkrc"
+template = "gtk"
+subtemplate = "gtk-2"
+rewrite = true
+
+[[item]]
+file = "~/.config/gtk-3.0/gtk.css"
+template = "gtk"
+subtemplate = "gtk-3"
+rewrite = true

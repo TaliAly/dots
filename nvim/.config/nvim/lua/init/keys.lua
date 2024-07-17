@@ -17,6 +17,8 @@ vim.keymap.set("n", "<leader>gh", ":vim.lsp.buf.hover()<CR>", opt("Code [H]over"
 -- replace word
 vim.keymap.set("n", "<leader>ph", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], opt("replace word"))
 
+vim.keymap.set("n", "<leader>vs", ":vsplit<CR>", opt("[V]iew [S]plit"))
+
 -- If new me read this, you should search for something to list the current
 -- buffers and search with fzf
 
@@ -25,3 +27,7 @@ vim.keymap.set("n", "<leader>ph", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left>
 -- new new new me, I do not want that now.
 -- I would prefer to have some kind of list
 -- for buffers that I can jump into instead of next and back
+--
+-- New new new new me, fuck you, you won't do anything but get a better way to change windows, just anything
+--
+-- Nah won't do :) - Jun 16

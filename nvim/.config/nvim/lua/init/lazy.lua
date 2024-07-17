@@ -1,13 +1,10 @@
--- [[ Install `lazy.nvim` plugin manager ]]
---    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
 	local lazyrepo = "https://github.com/folke/lazy.nvim.git"
 	vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
-end ---@diagnostic disable-next-line: undefined-field
+end
 vim.opt.rtp:prepend(lazypath)
 
--- [[ plugins ]]
 require("lazy").setup({
 	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
 
@@ -50,7 +47,6 @@ require("lazy").setup({
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
-			-- Automatically install LSPs and related tools to stdpath for neovim
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
@@ -95,16 +91,6 @@ require("lazy").setup({
 		},
 	},
 
-	{
-		"rose-pine/neovim",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			vim.cmd.colorscheme("rose-pine-moon")
-			vim.cmd.hi("Comment gui=none")
-		end,
-	},
-
 	{ -- Collection of various small independent plugins/modules
 		"echasnovski/mini.nvim",
 		config = function()
@@ -137,9 +123,19 @@ require("lazy").setup({
 				return ""
 			end
 
-			-- ... and there is more!
-			--  Check out: https://github.com/echasnovski/mini.nvim
+			local colors = require("plugins.colors")
+			require("mini.base16").setup({
+				palette = colors,
+				use_cterm = true,
+			})
 		end,
+	},
+	{
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		config = true,
+		-- use opts = {} for passing setup options
+		-- this is equalent to setup({}) function
 	},
 
 	{ -- Highlight, edit, and navigate code
@@ -161,10 +157,7 @@ require("lazy").setup({
 	"nvim-tree/nvim-tree.lua",
 
 	{
-		"windwp/nvim-autopairs",
-		event = "InsertEnter",
-		config = true,
+		"IogaMaster/neocord",
+		event = "VeryLazy",
 	},
-
-	"andweeb/presence.nvim",
 })

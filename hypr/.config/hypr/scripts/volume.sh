@@ -12,7 +12,7 @@ function send_notification {
   bar=$(seq --separator="─" 0 "$((volume / 6))" | sed 's/[0-9]//g')
   spaces=$(seq --separator=" " 0 "$(( 17 - (volume / 6) ))" | sed 's/[0-9]//g')
   # Send the notification
-  dunstify -a "volume" -i ~/Downloads/vol.jpg -h string:x-dunst-stack-tag:vol -u normal "  ${bar}${spaces} $volume%"
+  notify-send -a "volume" -u normal -h string:x-canonical-private-synchronous:anything "${bar}${spaces} $volume%"
   # Send the notification
 }
 

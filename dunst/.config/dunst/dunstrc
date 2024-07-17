@@ -1,204 +1,126 @@
 [global]
+   
+    ### Display ###
 
-    # --- Display --- #
-
-    # The monitor to be displayed to
-    monitor = 0
-
-    # Follow monitor with mouse
+    # Display notifications on monitor with mouse focus
     follow = mouse
-
-    width = 300
-    # height = 260
-    origin = top-right
-    offset = 24x24
-
-
-    progress_bar = true
-    progress_bar_height = 14
-    progress_bar_frame_width = 1
-    progress_bar_min_width = 150
-    progress_bar_max_width = 300
-
-
-    # Show how many messages are hidden
+    # Set {width}x{height} and {x_pos}+{y_pos}
+    geometry = "300x30-5+60"
+    # Show number of hidden notifications
     indicate_hidden = yes
-
-    # Shrink window if it's smaller than the width.
+    # Shrink window if smaller than width
     shrink = no
-
-    # The transparency of the window.
-    transparency = 1
-
-    # Draw a line between multiple notifications
-    separator_height = 6
-
-    separator_color = "#272f57"
-
-    # Set notification padding
-    padding = 16
-    horizontal_padding = 16
-
-    # Disable frame (border)
-    frame_width = 0
-
-    # Sort messages by urgency.
-    sort = no
-
-    # Disable idle time
+    # Set transparency of notifications
+    transparency = 0
+    # Height of whole notification    
+    notification_height = 0
+    # Height of seperators
+    separator_height = 2
+    # Text and seperator padding
+    padding = 8
+    # Horizontal padding
+    horizontal_padding = 8
+    # Width of frame around window
+    frame_width = 1
+    # Sort messages by urgency
+    sort = yes
+    # Idle seconds
     idle_threshold = 0
 
-   
-    # --- Text --- #
-
-    # Set the font
-    # font = "Noto Sans 11"
-    font = "JetbrainsMono Nerd Font 11"
-
-    # Set line height to font height
-    line_height = 0
-
-    # Reference for markup and formatting:
-    #  <b>bold</b>
-    #  <i>italic</i>
-    #  <s>strikethrough</s>
-    #  <u>underline</u>
-    #  <https://developer.gnome.org/pango/stable/pango-Markup.html>.
-    #  %a appname
-    #  %s summary
-    #  %b body
-    #  %i iconname (including its path)
-    #  %I iconname (without its path)
-    #  %p progress value if set ([  0%] to [100%]) or nothing
-    #  %n progress value if set without any extra characters
-    #  %% Literal %
-
-    markup = full
-    format = "<b>%a</b>\n%s\n%b"
-    font = "Jetbrains Mono 10"
-
-    # Left align the text
-    alignment = left
-
-    # Vertical alignment of message text and icon.
-    vertical_alignment = top
-
-    # Show age of message if message is old
-    show_age_threshold = 120
-
-    # Wrap text if it doesn't fit in geometry
-    word_wrap = yes
-
-    # Where to place ellipses if word wrap is disabled
-    # ellipsize = middle
-
-    # Use newlines '\n' in notifications.
-    ignore_newline = no
-
-    # Don't stack together notifications
-    stack_duplicates = false
-
-    # Hide the count of stacked notifications
-    # hide_duplicate_count = false
-
-    # Display indicators for URLs (U) and actions (A).
-    show_indicators = yes
-
+    ### Text ###
     
-    # ---- Icons ---- #
+    # Set font of notifications
+    font = Iosevka 10
+    # Spacing between lines 
+    line-height = 0
+    # Markup parsing
+    markup = full
+    # Message format:
+    # %a - appname
+    # %s - summary
+    # %b - body
+    # %i - iconname (with path)
+    # %I - iconname (without path)
+    # %p - progress value (if set)
+    # %n - progress value no extra characters
+    # %% - literal %
+    format = "<b>%a</b>\n<i>%s</i>\n%b"
+    # Align message text horizontally
+    alignment = center
+    # Align message text vertically
+    vertical_alignment = center
+    # Show age of message if message is older than x seconds
+    show_age_threshold = -1
+    # Split notifications into multiple lines
+    word_wrap = no
+    # If message too long, add ellipsize to...
+    ellipsize = middle
+    # Ignore newlines in notifications
+    ignore_newline = no
+    # Stack duplicate notifications
+    stack_duplicates = true
+    # Hide number of duplicate notifications
+    hide_duplicate_count = true
+    # Show indicatiors  for urls and actions
+    show_indicators = no
+   
+    ### Icons ###
+    
+    # Disable icons
+    icon_position = off
 
-    # Align icons left/right/off
-    icon_position = left
-
-    # Scale small icons up to this size, set to 0 to disable.
-    min_icon_size = 50
-
-    # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 60
-
-    # Paths to default icons.
-    icon_path = /usr/share/icons/kora/apps/scalable:/usr/share/icons/kora/status/scalable:/usr/share/icons/kora/actions/scalable:/usr/share/icons/kora/emblems/scalable:/usr/share/icons/kora/devices/scalable
- 
-    # --- History --- #
-
-    # Avoid timing out hidden notifications
-    sticky_history = yes
-
-    # Maximum amount of notifications kept in history
-    history_length = 100
-
-
-    # --- Misc/Advanced --- #
-
+    ### History ###
+    
+    # Length of history
+    history_length = 20
+    
+    ### Misc ###
+    
+    # Dmenu path
     dmenu = /usr/bin/dmenu -p dunst:
-
-    # Browser for opening urls in context menu.
+    # Browser
     browser = /usr/bin/firefox -new-tab
-
-    # Always run rule-defined scripts, even if the notification is suppressed
-    always_run_script = false
-
-    # Define the title of the windows spawned by dunst
+    # Always run scripts
+    always_run_script = true
+    # Title of notification
     title = Dunst
-
-    # Define the class of the windows spawned by dunst
+    # Notification class
     class = Dunst
-
-    # Define the corner radius of the notification window
-    corner_radius = 12
-
-    # Don't gnore the dbus closeNotification message.
+    # Print notification on startup
+    startup_notification = false
+    # Dunst verbosity
+    verbosity = mesg
+    # Corner radius of dunst
+    corner_radius = 15
+    # Ignore dbus closeNotification message
     ignore_dbusclose = false
 
+    ### Mouse ###
 
-    # --- Legacy --- #
+    # Left click
+    mouse_left_click = close_current
+    # Middle click
+    mouse_middle_click = do_action
+    # Right click
+    mouse_right_click = do_action
 
-    # Use the Xinerama extension instead of RandR for multi-monitor support.
-    force_xinerama = false
+[shortcuts]
 
-
-    # --- Mouse --- #
-    mouse_left_click = do_action, close_current
-    mouse_middle_click = do_action, close_current
-    mouse_right_click = close_all
-
-
-[experimental]
-    per_monitor_dpi = false
-
-[urgency_low]
-    background = "#141929fe"
-    highlight = "#6fa6e7"
-    frame_color = "#272f57"
-    foreground = "#dae1f2"
-    timeout = 8
+    # Close one notification
+    close = ctrl+space
+    # Close all notifications
+    close_all = ctrl+shift+space
 
 [urgency_normal]
-    background = "#141929fe"
-    highlight = "#5ca1ff"
 
-    frame_color = "#272f57"
-    foreground = "#dae1f2"
-    timeout = 8
+    # Normal urgency notifications
+    background = "#202632"
+    foreground = "#ffffff"
+    timeout = 5
 
 [urgency_critical]
-    background = "#5ca1ffff"
-    highlight = "#fe6c5a"
-    foreground = "#1c2138"
-    frame_color = "#52426e"
+
+    # High urgency notifications
+    background = "#ffffff"
+    foreground = "#db0101"
     timeout = 0
-    icon = battery-ac-adapter
-
-[backlight]
-    appname = "Backlight"
-    highlight = "#fc7b80"
-
-[music]
-    appname = "Music"
-
-[volume]
-    summary = "Volume*"
-    highlight = "#cb8cf4"
-
-[battery]
-    appname = "Power Warning"

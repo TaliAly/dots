@@ -1,84 +1,95 @@
-*{
+@import "./colors.css";
+
+* {
     font-family: JetbrainsMono Nerd Font;
     font-size: 13px;
     min-height: 0;
 }
 
 window#waybar {
-    color:#e0def4;
-    background-color: #232136;
-    border-radius: 8px;
+    color: @base07;
+    /* background-color: #232136; */
+    background-color: transparent;
 }
 
-#workspaces{
-    font-size:12px;
+#workspaces {
+    font-size: 12px;
     padding: 0 5px;
-    padding-left:11px;
+    padding-left: 11px;
     margin: 5px;
-    background-color:#1f1d2e;
-    border-radius:99px;
+    border-radius: 8px;
+    /* background-color: #191724; */
+    background-color: @base00;
 }
 
-#workspaces button{
+#workspaces button {
     border-radius: 99px;
     margin-right: 10px;
     font-weight: bolder;
-    background-color: #181818;
-    color: #ffffff;
+    background-color: transparent;
 }
 
-#workspaces button.active, #workspaces button.focused{
-    background: #c4a7e7;
-    font-size:14px;
+#workspaces button.active,
+#workspaces button.focused {
+    color: @base07;
+    font-size: 14px;
 }
 
-#custom-powermenu {
-    margin-left: 11px;
-    padding: 0 10px;
-}
 #custom-mic {
     padding: 0 10px;
 }
 
 #tray,
-#mpd,
-#custom-weather,
-#custom-powermenu,
-#cpu, 
-#temperature, 
-#memory,
 #sway-mode,
-#backlight, 
-#pulseaudio, 
-#custom-vpn,
-#disk,
-#custom-recorder,
-#custom-audiorec,
-#battery, 
+#pulseaudio,
+#battery,
 #custom-mic,
-#custom-image,
 #bluetooth,
+#custom-wlsunset,
 #clock,
 #network {
     padding: 0 10px;
-    font-size:14px;
+    font-size: 14px;
+    background: @base00;
+}
+
+#network,
+#bluetooth,
+#pulseaudio,
+#custom-mic,
+#custom-wlsunset {
+    color: @base0B;
+}
+
+#network {
+    border-radius: 8px 0 0 8px;
+}
+
+#custom-mic {
+    border-radius: 0 8px 8px 0;
 }
 
 #bluetooth .connected {
-    color: #ebbcba;
+    color: @base0A;
 }
 
 #image-test {
     padding: 10px;
 }
 
+#battery {
+    margin-left: 8px;
+    border-radius: 8px 0 0 8px;
+}
+
+#tray {
+    border-radius: 0 8px 8px 0;
+}
+
 #submap {
-    background-color: #f6c175;
-    color: #191724;
+    background-color: @base0F;
+    color: @base07;
     border-radius: 15px;
     margin: 5px 0;
     padding: 0 10px;
 }
-
-
-
