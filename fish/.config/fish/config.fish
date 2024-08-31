@@ -7,13 +7,21 @@ if status is-interactive
     alias pd "podman"
     alias ls "eza -a --icons --color=always --group-directories-first"
     alias clr "clear"
+    alias v "nvim ."
+    alias l "ls"
+    alias vim "nvim ."
+
+    # git
+    alias g "git"
+    alias gac "git add . && git commit"
 
     #utils
     alias untar "tar -xvzf"
     alias trees "eza --tree --color always | less -R"
 
     # scripts
-    alias session "~/.bin/scripts/tmux-sessionizer"
+    alias session "~/.local/bin/scripts/tmux-sessions.sh"
+    alias dots "~/.local/bin/scripts/dots.sh"
 
     # typoes
     alias claer "clear"
@@ -24,8 +32,8 @@ end
 # Generated for envman. Do not edit.
 test -s ~/.config/envman/load.fish; and source ~/.config/envman/load.fish
 
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
-set PATH $PATH ~/.cargo/bin
-set -gx VOLTA_HOME "$HOME/.volta"
-set -gx PATH "$VOLTA_HOME/bin" $PATH
+source ~/.config/envman/PATH.env
+
+# added by Webi for pyenv
+status is-login; and pyenv init --path | source
+status is-interactive; and pyenv init - | source

@@ -1,0 +1,131 @@
+{
+  "position": "bottom",
+  "mod": "dock",
+  "layer": "top",
+  "width": 1366,
+  "margin-top": 0,
+  "reload_style_on_change": true,
+  "modules-left": ["clock", "custom/mic" "temperature"],
+  "modules-center": ["hyprland/workspaces", "hyprland/submap" ],
+  "modules-right": [network", "bluetooth","pulseaudio", "custom/wlsunset", "battery", "tray"],
+
+  "hyprland/submap": {
+      "format": "{}",
+      "max-length": 30,
+      "tooltip": false
+  },
+
+  "hyprland/mode": {
+      "format": " {}",
+      "max-length": 50,
+      "always-on": true,
+      "no-mode-message": "No Mode",
+  },
+
+  "hyprland/workspaces": {
+      "disable-scroll": false,
+      "on-click": "activate",
+      "all-outputs": true,
+      "format": "{icon}",
+      "format-icons": {
+          "1": "ー",
+          "2": "ニ",
+          "3": "ヌ",
+          "4": "ネ",
+          "5": "ノ",
+          "6": "マ", 
+          "7": "ミ",
+          "8": "ム",
+      }
+  },
+
+  "clock": {
+      "format": "{: %I:%M }",
+      "timezone": "America/Bogota",
+      "on-click": "kitty -e tuime",
+  },
+
+  "temperature":  "temperature": {
+      "thermal-zone": 2,
+      "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+      "critical-threshold": 80,
+      "format-critical": "{icon} {temperatureC}°C",
+      "format": "{icon} {temperatureC}°C",
+      "format-icons": ["", "", ""]
+  },
+
+  "battery": {
+      "states": {
+          "warning": 30,
+          "critical": 15
+      },
+      "format": "<span>{icon}</span> {capacity}%",
+      "format-warning": "<span>{icon}</span> {capacity}%",
+      "format-critical": "<span>{icon}</span> {capacity}%",
+      "format-charging": "<span> </span> {capacity}%",
+      "format-plugged": "<span></span> {capacity}%",
+      "format-alt": "<span>{icon}</span> {time}",
+      "format-full": "<span> </span>",
+      "format-icons": [" ", " ", " ", " ", " "],
+      "tooltip-format": "{time}"
+  },
+
+  "network": {
+      "format-wifi": "<span> </span>",
+      "format-ethernet": "<span foreground='#403d52'>󰤭 </span>",
+      "format-linked": "{ifname} (No IP) ",
+      "format-disconnected": "<span foreground='#403d52'>󰤭 </span>",
+      "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
+      "on-click": "kitty -e nmtui",
+  },
+
+  "pulseaudio": {
+      "on-click": "pavucontrol",
+      "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +2%",
+      "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -2%",
+      "on-right-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+      "format": "<span>{icon}</span>",
+      "format-muted": "<span></span>  Muted",
+      "format-icons": {
+          "headphone": " ",
+          "hands-free": " ",
+          "headset": " ",
+          "phone": " ",
+          "portable": " ",
+          "car": " ",
+          "default": [" ", " "]
+      }
+  },
+
+  "bluetooth": {
+      "format": "",
+      "format-disabled": "<span foreground='#403d52'></span>", // an empty format will hide the module
+      "format-connected": "",
+      "tooltip-format": "{device_alias}",
+      "tooltip-format-connected": "",
+      "tooltip-format-enumerate-connected": "{device_alias}",
+      "on-click": "rfkill toggle bluetooth",
+      "on-click-right": "blueman-manager",
+  },
+
+  // ╔═╗┬ ┬┌─┐┌┬┐┌─┐┌┬┐  ┌┬┐┌─┐┌┬┐┬ ┬┬  ┌─┐┌─┐
+  // ║  │ │└─┐ │ │ ││││  ││││ │ │││ ││  ├┤ └─┐
+  // ╚═╝└─┘└─┘ ┴ └─┘┴ ┴  ┴ ┴└─┘─┴┘└─┘┴─┘└─┘└─┘
+
+  "custom/mic": {
+      "format": "{}",
+      "exec": "~/.config/waybar/scripts/mic.sh",
+      "tooltip": false,
+      "tooltip-format": "{}",
+      "on-click": "amixer set Capture toggle"
+  },
+  "custom/wlsunset": {
+      "format": " ",
+      "tooltip": false,
+      "on-click": "[[ ! pgrep wlsunset ]] && wlsunset || killall wlsunset"
+  },
+  "tray": {
+      "icon-size": 18,
+      "spacing": 5
+  },
+}

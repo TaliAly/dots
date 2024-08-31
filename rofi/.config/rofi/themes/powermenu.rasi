@@ -1,13 +1,20 @@
 @import "theme.rasi"
 
+configuration {
+    font:       "GeistMono NF 11";
+    show-icons: false;
+}
+
 * {
-    icon-font: "FontAwesome5Free 18";
-    background-color: @bg;
+    icon-font: "FontAwesome5Free 12";
 }
 
 window {
-    width: 500px;
-    border-radius: 8px;
+    width:                      100px;
+    border-radius:              8px;
+    background-color:           @background;
+    location:                   east;
+    anchor:                     east;
 }
 
 mainbox {
@@ -15,14 +22,15 @@ mainbox {
 }
 
 listview {
-    columns: 4;
-    lines: 1;
+    columns: 1;
+    lines: 4;
     children: [element-text];
     padding: 10px 15px;
+    spacing: 10px;
 }
 
 element-text {
-    background-color: @bg-semilight;
+    background-color: @foreground;
     horizontal-align: 0.5;
     padding: 20px 10px;
     font: @icon-font;
@@ -32,6 +40,6 @@ element-text {
 }
 
 element-text selected {
-    background-color: @bg-hover;
+    background-color: @selected-active-background;
     color: @fg-hover;
 }

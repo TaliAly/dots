@@ -1,5 +1,6 @@
 shell = "bash -c '{}'"
 
+
 [[items]]
 file = "~/.config/waybar/colors.css"
 template = "waybar"
@@ -32,20 +33,20 @@ hook=""
 
 
 [[item]]
-file= "~/.config/rofi/config.rasi"
+file= "~/.config/rofi/themes/theme.rasi"
 template = "rofi"
-rewrite = false
-start= "/* flavours */"
-end = "/* end flavours */"
+rewrite = true
+
+
+# custom software you'll want to add :)
+# CHANGE FOR YOUR USE CASE
 
 [[item]]
-file = "~/.config/gtk-2.0/gtkrc"
-template = "gtk"
-subtemplate = "gtk-2"
+file = "~/.var/app/dev.vencord.Vesktop/config/vesktop/themes/base16.css"
+template = "discord"
 rewrite = true
 
 [[item]]
-file = "~/.config/gtk-3.0/gtk.css"
-template = "gtk"
-subtemplate = "gtk-3"
+file = "~/Minmax/.obsidian/snippets/colors.css"
+template = "obsidian"
 rewrite = true

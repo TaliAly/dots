@@ -1,22 +1,21 @@
 @import "./colors.css";
 
 * {
-    font-family: JetbrainsMono Nerd Font;
-    font-size: 13px;
+    font-family: GeistMono NF;
+    font-size: 12px;
     min-height: 0;
 }
 
 window#waybar {
+    background-color: @base00;
     color: @base07;
-    /* background-color: #232136; */
-    background-color: transparent;
 }
 
 #workspaces {
     font-size: 12px;
     padding: 0 5px;
     padding-left: 11px;
-    margin: 5px;
+    margin: 0 5px;
     border-radius: 8px;
     /* background-color: #191724; */
     background-color: @base00;

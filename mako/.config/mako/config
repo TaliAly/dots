@@ -1,0 +1,25 @@
+border-radius=8
+history=1
+max-history=4
+default-timeout=2000
+
+
+#flavour
+## Base16 Humanoid dark
+# Author: Thomas (tasmo) Friese
+
+background-color=#232629
+text-color=#f8f8f2
+border-color=#00a6fb
+
+[urgency=low]
+background-color=#232629
+text-color=#ffb627
+border-color=#00a6fb
+
+[urgency=high]
+background-color=#232629
+text-color=#f11235
+border-color=#00a6fb
+#end
+

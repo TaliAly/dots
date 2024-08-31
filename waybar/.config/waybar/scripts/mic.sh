@@ -1,3 +1,5 @@
+#!/bin/bash
+
 show() {
 check_muted="$(pactl get-source-mute @DEFAULT_SOURCE@ | awk -F': ' '{print $2}')"
   if [ $check_muted == "yes" ]; then
@@ -15,6 +17,12 @@ monitor() {
     done
     exit
 }
+
+# kill pactl if there is a patcl service already
+if [[ $(pgrep pactl) ]]; then
+  pkill pactl 
+fi
+
 
 show
 monitor

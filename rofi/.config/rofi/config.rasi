@@ -1,50 +1,13 @@
+@import "themes/theme.rasi"
+
 configuration {
     modi:                       "drun";
     display-drun:               "";
     drun-display-format:        "{name}";
-    font:                       "GeistMono NF 12";
+    font:                       "GeistMono NF 11";
     hover-select:               true;
 }
 
-* {
-    /* flavours */
-/**
- * Base16 Generated ROFI Color theme
- *
- * Authors
- *  Scheme: Flavours
- *  Template: Tinted Theming (https://github.com/tinted-theming)
- */
-    red:                         rgba ( 186, 172, 176, 100 % );
-    blue:                        rgba ( 150, 141, 153, 100 % );
-    lightfg:                     rgba ( 209, 223, 220, 100 % );
-    lightbg:                     rgba ( 69, 74, 74, 100 % );
-    foreground:                  rgba ( 201, 217, 214, 100 % );
-    background:                  rgba ( 36, 39, 39, 100 % );
-    background-color:            rgba ( 36, 39, 39, 0 % );
-    separatorcolor:              @foreground;
-    border-color:                @foreground;
-    selected-normal-foreground:  @lightbg;
-    selected-normal-background:  @lightfg;
-    selected-active-foreground:  @background;
-    selected-active-background:  @blue;
-    selected-urgent-foreground:  @background;
-    selected-urgent-background:  @red;
-    normal-foreground:           @foreground;
-    normal-background:           @background;
-    active-foreground:           @blue;
-    active-background:           @background;
-    urgent-foreground:           @red;
-    urgent-background:           @background;
-    alternate-normal-foreground: @foreground;
-    alternate-normal-background: @background;
-    alternate-active-foreground: @blue;
-    alternate-active-background: @lightbg;
-    alternate-urgent-foreground: @red;
-    alternate-urgent-background: @lightbg;
-    spacing:                     2;
-    /* end flavours */
-}
 window {
     /* background-color: @background; */
     border:           1;

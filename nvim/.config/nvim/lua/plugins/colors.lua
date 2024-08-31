@@ -2,26 +2,26 @@
 -- Author: Flavours
 
 --# Start Flavours
--- Base16 Generated
--- Author: Flavours
+-- Base16 Humanoid dark
+-- Author: Thomas (tasmo) Friese
 
 local palette = {
-    base00 = "#242727",
-    base01 = "#454a4a",
-    base02 = "#666e6d",
-    base03 = "#879290",
-    base04 = "#a8b5b3",
-    base05 = "#c9d9d6",
-    base06 = "#d1dfdc",
-    base07 = "#d9e4e2",
-    base08 = "#baacb0",
-    base09 = "#83c2cc",
-    base0A = "#a4d3dc",
-    base0B = "#a4bec3",
-    base0C = "#aba3ad",
-    base0D = "#968d99",
-    base0E = "#d7c3bd",
-    base0F = "#d2977e",
+    base00 = "#232629",
+    base01 = "#333b3d",
+    base02 = "#484e54",
+    base03 = "#60615d",
+    base04 = "#c0c0bd",
+    base05 = "#f8f8f2",
+    base06 = "#fcfcf6",
+    base07 = "#fcfcfc",
+    base08 = "#f11235",
+    base09 = "#ff9505",
+    base0A = "#ffb627",
+    base0B = "#02d849",
+    base0C = "#0dd9d6",
+    base0D = "#00a6fb",
+    base0E = "#f15ee3",
+    base0F = "#b27701",
 }
 --# End Flavours
 

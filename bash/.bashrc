@@ -29,3 +29,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+# added by Webi for pyenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
