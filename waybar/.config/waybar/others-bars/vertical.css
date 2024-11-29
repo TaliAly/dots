@@ -1,43 +1,36 @@
-/* Template made by: talialy  */
+* /* Template made by: talialy  */
 /* For colors, use colors.css */
 
 * {
-    font-family: JetbrainsMono Nerd Font;
+    font-family: JetbrainsMonoNF;
     font-size: 12px;
-    min-height: 10px;
+    min-height: 8px;
 }
 
 window#waybar {
     color: @base07;
-    background-color: transparent;
+    background-color: @base00;
 }
 
 #workspaces {
-    padding: 0px 10px;
-    margin: 5px;
+    padding: 12px 0;
     border-radius: 8px;
-    background-color: @base00;
 }
 
 #workspaces button {
     border-radius: 99px;
-    margin-right: 8px;
-    color: @base01;
+    color: @base02;
     font-weight: bolder;
-    background-color: transparent;
-}
-
-#workspaces button:last-child {
-    margin-right: 4px;
 }
 
 #workspaces button.active,
 #workspaces button.focused {
     color: @base07;
+    min-height: 4px;
 }
 
 #custom-mic {
-    padding: 0 10px;
+    padding: 0 0px;
 }
 
 #tray,
@@ -49,20 +42,20 @@ window#waybar {
 #custom-wlsunset,
 #clock,
 #network {
-    padding: 0px 10px;
-    background: @base00;
+    padding: 3px 0px;
+    color: @base05;
+    font-size: 13px;
 }
 
-#network,
-#pulseaudio,
-#custom-mic,
-#custom-wlsunset {
-    color: @base0B;
+#custom-wlsunset,
+#custom-mic {
+    padding: 5px 0px;
 }
 
 #bluetooth {
     color: @base01;
 }
+
 #bluetooth.connected {
     color: @base07;
 }
@@ -73,10 +66,6 @@ window#waybar {
 
 #custom-mic {
     border-radius: 0 8px 8px 0;
-}
-
-#image-test {
-    padding: 10px;
 }
 
 #battery {
@@ -93,5 +82,5 @@ window#waybar {
     color: @base07;
     border-radius: 15px;
     margin: 5px 0;
-    padding: 0 10px;
+    padding: 0 0px;
 }

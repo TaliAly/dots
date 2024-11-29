@@ -2,26 +2,26 @@
 -- Author: Flavours
 
 --# Start Flavours
--- Base16 Humanoid dark
--- Author: Thomas (tasmo) Friese
+-- Base16 Seti UI
+-- Author: 
 
 local palette = {
-    base00 = "#232629",
-    base01 = "#333b3d",
-    base02 = "#484e54",
-    base03 = "#60615d",
-    base04 = "#c0c0bd",
-    base05 = "#f8f8f2",
-    base06 = "#fcfcf6",
-    base07 = "#fcfcfc",
-    base08 = "#f11235",
-    base09 = "#ff9505",
-    base0A = "#ffb627",
-    base0B = "#02d849",
-    base0C = "#0dd9d6",
-    base0D = "#00a6fb",
-    base0E = "#f15ee3",
-    base0F = "#b27701",
+    base00 = "#151718",
+    base01 = "#282a2b",
+    base02 = "#3b758c",
+    base03 = "#41535b",
+    base04 = "#43a5d5",
+    base05 = "#d6d6d6",
+    base06 = "#eeeeee",
+    base07 = "#ffffff",
+    base08 = "#cd3f45",
+    base09 = "#db7b55",
+    base0A = "#e6cd69",
+    base0B = "#9fca56",
+    base0C = "#55dbbe",
+    base0D = "#55b5db",
+    base0E = "#a074c4",
+    base0F = "#8a553f",
 }
 --# End Flavours
 

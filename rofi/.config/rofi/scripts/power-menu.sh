@@ -3,11 +3,11 @@
 rofi_command="rofi -theme themes/powermenu.rasi"
 
 # Options
-shutdown=" "
-reboot=" "
+shutdown=" "
+reboot=""
 lock=" "
-suspend=""
-logout=" "
+logout=" "
+
 
 # Variable passed to rofi
 options="$shutdown\n$reboot\n$lock\n$suspend\n$logout"
@@ -18,8 +18,6 @@ case $chosen in
         exec systemctl poweroff -i;;
     $reboot)
         exec systemctl reboot;;
-    $suspend)
-        exec systemctl suspend;;
     $logout)
         exec hyprctl dispatch exit;;
 esac

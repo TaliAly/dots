@@ -1,0 +1,110 @@
+/* Template made by: talialy  */
+/* Want to change colors? use colors.css */
+
+* {
+    font-family: JetbrainsMono Nerd Font;
+    font-size: 12px;
+    min-height: 10px;
+}
+
+window#waybar {
+    padding:0 4px 4px 4px;
+    color: @base06;
+    background-color: transparent;
+}
+
+
+/*
+* current layout:
+*
+* LEFT SIDE: workspaces, submaps
+* MIDDLE SIDE: clock & calendar
+* RIGHT SIDE: tray, night light, bluetooth, wifi, audio, battery
+*
+*/
+
+#workspaces {
+    border-radius: 8px;
+    padding: 0px 10px;
+    background-color: @base00;
+}
+
+#workspaces button {
+    border-radius: 99px;
+    margin-right: 8px;
+    color: @base01;
+    font-weight: bolder;
+    background-color: transparent;
+}
+
+#workspaces button:last-child {
+    margin-right: 4px;
+}
+
+#workspaces button.active,
+#workspaces button.focused {
+    color: @base07;
+}
+
+#tray,
+#sway-mode,
+#pulseaudio,
+#battery,
+#custom-mic,
+#bluetooth,
+#custom-wlsunset,
+#clock,
+#temperature,
+#network {
+    padding: 0px 10px;
+    background: @base00;
+    color: @base0B;
+}
+
+#clock {
+    border-radius: 8px;
+}
+
+/* first batch */
+#tray {
+    border-radius: 8px 0 0 8px;
+}
+
+#network,
+#pulseaudio,
+#custom-mic,
+#custom-wlsunset {
+    color: @base0B;
+}
+
+#custom-mic {
+    padding: 0 10px;
+    margin: 0 10px 0 0;
+    border-radius: 0 8px 8px 0;
+}
+
+/* main stuff 
+* bluetooh, wifi, pulseaudio and battery
+*/
+
+#bluetooth {
+    border-radius: 8px 0 0 8px;
+    color: @base01;
+}
+#bluetooth.connected {
+    color: @base07;
+}
+
+#battery {
+    border-radius: 0 8px 8px 0;
+}
+
+
+
+#submap {
+    background-color: @base0F;
+    color: @base07;
+    border-radius: 15px;
+    margin: 5px 0;
+    padding: 0 10px;
+}

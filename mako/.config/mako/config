@@ -5,21 +5,21 @@ default-timeout=2000
 
 
 #flavour
-## Base16 Humanoid dark
-# Author: Thomas (tasmo) Friese
+## Base16 Seti UI
+# Author: 
 
-background-color=#232629
-text-color=#f8f8f2
-border-color=#00a6fb
+background-color=#151718
+text-color=#d6d6d6
+border-color=#55b5db
 
 [urgency=low]
-background-color=#232629
-text-color=#ffb627
-border-color=#00a6fb
+background-color=#151718
+text-color=#e6cd69
+border-color=#55b5db
 
 [urgency=high]
-background-color=#232629
-text-color=#f11235
-border-color=#00a6fb
+background-color=#151718
+text-color=#cd3f45
+border-color=#55b5db
 #end
 

@@ -1,0 +1,21 @@
+{
+    // ╔═╗┬ ┬┌─┐┌┬┐┌─┐┌┬┐  ┌┬┐┌─┐┌┬┐┬ ┬┬  ┌─┐┌─┐
+    // ║  │ │└─┐ │ │ ││││  ││││ │ │││ ││  ├┤ └─┐
+    // ╚═╝└─┘└─┘ ┴ └─┘┴ ┴  ┴ ┴└─┘─┴┘└─┘┴─┘└─┘└─┘
+
+    "custom/mic": {
+        "format": "{}",
+        "exec": "~/.config/waybar/scripts/mic.sh",
+        "tooltip": false,
+        "tooltip-format": "{}",
+        "on-click": "amixer set Capture toggle"
+    },
+
+    "custom/wlsunset": {
+        "format": "{}",
+        "tooltip": false,
+        "exec": "~/.config/waybar/scripts/sunset/wlsunset.sh",
+        "on-click": "~/.config/waybar/scripts/sunset/toggle.sh"
+    },
+
+}

@@ -20,9 +20,8 @@ window#waybar {
 
 #workspaces button {
     border-radius: 99px;
-    color: @base01;
+    color: @base02;
     font-weight: bolder;
-    background-color: transparent;
 }
 
 #workspaces button:last-child {
@@ -32,6 +31,11 @@ window#waybar {
 #workspaces button.active,
 #workspaces button.focused {
     color: @base07;
+    min-height: 4px;
+}
+#workspaces button.active {
+    padding: 0px 12px;
+    background-color: @base07;
 }
 
 #custom-mic {

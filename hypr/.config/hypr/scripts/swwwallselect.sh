@@ -9,6 +9,6 @@ selected=$(ls $dir | while read A ; do  echo -en "$A\x00icon\x1f$dir/$A\n"; done
 if [[ selected != "" && "$dir/$selected" != "$dir/" ]]; then
   swww img $dir/$selected --transition-fps 60 --transition-type center --transition-duration 1
   flavours generate dark $dir/$selected
-  flavours apply
+  flavours apply generated
 fi
 

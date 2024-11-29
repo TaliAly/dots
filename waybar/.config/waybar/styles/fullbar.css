@@ -1,0 +1,90 @@
+/* Template made by: talialy  */
+/* For colors, use colors.css */
+
+* {
+    font-family: GeistMono NF;
+    font-size: 12px;
+    min-height: 8px;
+}
+
+window#waybar {
+    color: @base07;
+    background-color: @base00;
+    padding: 3px;
+}
+
+#workspaces {
+    padding: 0px 4px;
+    border-radius: 8px;
+}
+
+#workspaces button {
+    border-radius: 99px;
+    color: @base02;
+    font-weight: bolder;
+    background-color: transparent;
+}
+
+#workspaces button:last-child {
+    margin-right: 4px;
+}
+
+#workspaces button.active,
+#workspaces button.focused {
+    color: @base7;
+}
+
+#custom-mic {
+    padding: 0 10px;
+}
+
+#tray,
+#sway-mode,
+#pulseaudio,
+#battery,
+#custom-mic,
+#bluetooth,
+#custom-wlsunset,
+#clock,
+#network {
+    padding: 0px 8px;
+    color: @base05;
+    font-size: 13px;
+}
+
+#bluetooth {
+    color: @base01;
+}
+
+#bluetooth.connected {
+    color: @base07;
+}
+
+#network {
+    border-radius: 8px 0 0 8px;
+}
+
+#custom-mic {
+    border-radius: 0 8px 8px 0;
+}
+
+#image-test {
+    padding: 10px;
+}
+
+#battery {
+    margin-left: 8px;
+    border-radius: 8px 0 0 8px;
+}
+
+#tray {
+    border-radius: 0 8px 8px 0;
+}
+
+#submap {
+    background-color: @base0F;
+    color: @base07;
+    border-radius: 15px;
+    margin: 5px 0;
+    padding: 0 10px;
+}
