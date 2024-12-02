@@ -26,9 +26,9 @@
     },
 
     "clock": {
-        "format": "{:%I\n%M\n%p}",
+        "format": "{:%I:%M %p}",
         "rotate": 0,
-        "format-alt": "{:%d\n%m}",
+        "format-alt": "{:%d%m}",
         "tooltip-format": "<span>{calendar}</span>",
         "calendar": {
             "mode": "month",
@@ -61,12 +61,12 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "<span>{icon}</span>\n{capacity}",
-        "format-warning": "<span>{icon}</span>\n{capacity}",
-        "format-critical": "<span>{icon}</span>\n{capacity}",
-        "format-charging": "<span> </span>\n{capacity}",
-        "format-plugged": "<span></span>\n{capacity}",
-        "format-alt": "<span>{icon}</span>\n{time}",
+        "format": "<span>{icon}</span>{capacity}",
+        "format-warning": "<span>{icon}</span>{capacity}",
+        "format-critical": "<span>{icon}</span>{capacity}",
+        "format-charging": "<span> </span>{capacity}",
+        "format-plugged": "<span></span>{capacity}",
+        "format-alt": "<span>{icon}</span>{time}",
         "format-full": "<span> </span>",
         "format-icons": [" ", " ", " ", " ", " "],
         "tooltip-format": "{time}"

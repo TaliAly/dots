@@ -2,26 +2,26 @@
 -- Author: Flavours
 
 --# Start Flavours
--- Base16 Seti UI
--- Author: 
+-- Base16 Generated
+-- Author: Flavours
 
 local palette = {
-    base00 = "#151718",
-    base01 = "#282a2b",
-    base02 = "#3b758c",
-    base03 = "#41535b",
-    base04 = "#43a5d5",
-    base05 = "#d6d6d6",
-    base06 = "#eeeeee",
-    base07 = "#ffffff",
-    base08 = "#cd3f45",
-    base09 = "#db7b55",
-    base0A = "#e6cd69",
-    base0B = "#9fca56",
-    base0C = "#55dbbe",
-    base0D = "#55b5db",
-    base0E = "#a074c4",
-    base0F = "#8a553f",
+    base00 = "#30222a",
+    base01 = "#574c52",
+    base02 = "#7e767a",
+    base03 = "#a69fa1",
+    base04 = "#cdc9c9",
+    base05 = "#f4f3f1",
+    base06 = "#f6f4f3",
+    base07 = "#f7f6f5",
+    base08 = "#73931b",
+    base09 = "#dcb89e",
+    base0A = "#e3b0bc",
+    base0B = "#ceb2b6",
+    base0C = "#f9e2ec",
+    base0D = "#ae9a9c",
+    base0E = "#cba77e",
+    base0F = "#d09da6",
 }
 --# End Flavours
 

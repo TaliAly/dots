@@ -1,0 +1,12 @@
+{
+  "layer": "top",
+  "position": "top",
+  "width": 1360,
+  "margin-top": 3,
+ 
+
+  "modules-left": ["hyprland/workspaces", "hyprland/submap"],
+  "modules-center": [],
+  "modules-right": ["tray", "custom/wlsunset","bluetooth", "network", "battery","custom/mic", "pulseaudio", "clock"],
+}
+

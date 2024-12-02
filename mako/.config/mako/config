@@ -5,21 +5,21 @@ default-timeout=2000
 
 
 #flavour
-## Base16 Seti UI
-# Author: 
+## Base16 Generated
+# Author: Flavours
 
-background-color=#151718
-text-color=#d6d6d6
-border-color=#55b5db
+background-color=#30222a
+text-color=#f4f3f1
+border-color=#ae9a9c
 
 [urgency=low]
-background-color=#151718
-text-color=#e6cd69
-border-color=#55b5db
+background-color=#30222a
+text-color=#e3b0bc
+border-color=#ae9a9c
 
 [urgency=high]
-background-color=#151718
-text-color=#cd3f45
-border-color=#55b5db
+background-color=#30222a
+text-color=#73931b
+border-color=#ae9a9c
 #end
 

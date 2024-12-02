@@ -21,6 +21,10 @@ window#waybar {
 * MIDDLE SIDE: clock & calendar
 * RIGHT SIDE: tray, night light, bluetooth, wifi, audio, battery
 *
+* "modules-left": ["hyprland/workspaces", "hyprland/submap"],
+* "modules-center": ["battery", "pulseaudio", "clock", ],
+* "modules-right": ["tray", "custom/wlsunset", "custom/mic", "bluetooth", "network"],
+*
 */
 
 #workspaces {
@@ -62,12 +66,14 @@ window#waybar {
 }
 
 #clock {
-    border-radius: 8px;
+    border-radius: 0 8px 8px 0;
+    background: @base01;
 }
 
 /* first batch */
 #tray {
     border-radius: 8px 0 0 8px;
+    background: @base01;
 }
 
 #network,
@@ -77,29 +83,17 @@ window#waybar {
     color: @base0B;
 }
 
-#custom-mic {
-    padding: 0 10px;
-    margin: 0 10px 0 0;
-    border-radius: 0 8px 8px 0;
-}
 
 /* main stuff 
 * bluetooh, wifi, pulseaudio and battery
 */
 
 #bluetooth {
-    border-radius: 8px 0 0 8px;
     color: @base01;
 }
 #bluetooth.connected {
     color: @base07;
 }
-
-#battery {
-    border-radius: 0 8px 8px 0;
-}
-
-
 
 #submap {
     background-color: @base0F;

@@ -9,10 +9,6 @@
     "include": [
         "~/.config/waybar/custom.jsonc",
         "~/.config/waybar/modules.jsonc",
-        "~/.config/waybar/others-bars/vertical.jsonc"
+        "~/.config/waybar/others-bars/divided.jsonc"
     ],
-
-    "modules-left": ["hyprland/workspaces", "hyprland/submap"],
-    "modules-center": ["battery", "pulseaudio", "clock", ],
-    "modules-right": ["tray", "custom/wlsunset", "custom/mic", "bluetooth", "network"],
 }

@@ -1,6 +1,16 @@
 import os
-rootdir = '/home/takis/.dots/'
+import subprocess
+from os.path import isdir
 
-for subdir, dirs, files in os.walk(rootdir):
-    for file in files:
-        print(os.path.join(subdir, file))
+# Path to the folder
+folder_path = "/home/takis/.dots"
+
+folders = []
+
+for name in os.listdir(folder_path):
+    if isdir(os.path.join(folder_path, name)):
+        folders.append(name)
+print(folders)
+
+result = subprocess.run(['flatpak', 'list', '--columns=application'])
+result.stdout

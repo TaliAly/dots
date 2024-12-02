@@ -1,19 +1,19 @@
 * {
 
     /**
- * Base16 Seti UI ROFI Color theme
+ * Base16 Generated ROFI Color theme
  *
  * Authors
- *  Scheme: 
+ *  Scheme: Flavours
  *  Template: Tinted Theming (https://github.com/tinted-theming)
  */
-    red:                         rgba ( 205, 63, 69, 100 % );
-    blue:                        rgba ( 85, 181, 219, 100 % );
-    lightfg:                     rgba ( 238, 238, 238, 100 % );
-    lightbg:                     rgba ( 40, 42, 43, 100 % );
-    foreground:                  rgba ( 214, 214, 214, 100 % );
-    background:                  rgba ( 21, 23, 24, 100 % );
-    background-color:            rgba ( 21, 23, 24, 0 % );
+    red:                         rgba ( 115, 147, 27, 100 % );
+    blue:                        rgba ( 174, 154, 156, 100 % );
+    lightfg:                     rgba ( 246, 244, 243, 100 % );
+    lightbg:                     rgba ( 87, 76, 82, 100 % );
+    foreground:                  rgba ( 244, 243, 241, 100 % );
+    background:                  rgba ( 48, 34, 42, 100 % );
+    background-color:            rgba ( 48, 34, 42, 0 % );
     separatorcolor:              @foreground;
     border-color:                @foreground;
     selected-normal-foreground:  @lightbg;
